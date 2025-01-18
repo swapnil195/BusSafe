@@ -62,7 +62,7 @@ class _ProfilePageState extends State<ProfilePage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Profile Picture
+            
             Center(
               child: CircleAvatar(
                 radius: 60,
@@ -87,7 +87,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ProfileInfoRow(
                 icon: Icons.location_on, title: 'Location', value: user.location),
             SizedBox(height: 30),
-            // Edit Button
+            
             ElevatedButton(
               onPressed: editProfile,
               child: Text('Edit Profile'),
