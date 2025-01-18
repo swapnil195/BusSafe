@@ -27,7 +27,7 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  // User Profile Data
+  
   UserProfile user = UserProfile(
     name: 'Swapnil belkar',
     email: 'sb123@gmail.com',
@@ -35,7 +35,7 @@ class _ProfilePageState extends State<ProfilePage> {
     location: 'Mumbai,USA',
   );
 
-  // Method to handle edit action
+  
   void editProfile() async {
     final updatedUser = await Navigator.push(
       context,
