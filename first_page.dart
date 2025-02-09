@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hello/pages/Notifications.dart';
+import 'package:hello/pages/log.dart';
 import 'package:hello/pages/second_page.dart';
 import 'package:hello/pages/home_page.dart';
 import 'package:hello/pages/profile.dart';
-import 'package:hello/pages/settings.dart';
+import 'package:hello/pages/About us.dart';
 
 class first_page extends StatefulWidget {
    first_page({super.key});
@@ -13,22 +14,6 @@ class first_page extends StatefulWidget {
 }
 
 class _first_pageState extends State<first_page> {
-   int _selectedindex=0;
-
-   void _navigationBar(int index){
-     setState(() {
-       _selectedindex=index;
-     });
-   }
-
-  final List _pages=[
-    home_page(),
-
-    ProfilePage(),
-
-    settings(),
-  ];
-
   @override
   Widget build(BuildContext context) {
 
@@ -52,7 +37,7 @@ class _first_pageState extends State<first_page> {
               title: Text('Notifications'),
               onTap: (){
                 Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => otificatio())
+                  MaterialPageRoute(builder: (context) => NotificationScreen())
                 );
               },
 
@@ -63,7 +48,7 @@ class _first_pageState extends State<first_page> {
               title: Text('About Us'),
               onTap: (){
                 Navigator.push(context,
-                MaterialPageRoute(builder: (context)=>ProfilePage()));
+                MaterialPageRoute(builder: (context)=>AboutUs()));
               },
 
             )
@@ -97,11 +82,11 @@ class _first_pageState extends State<first_page> {
               onPressed:() {
 
             Navigator.push(context,
-              MaterialPageRoute(builder: (context) => ProfilePage()),
+              MaterialPageRoute(builder: (context) => log()),
             );
 
           },
-              child: Text("login as a administration or staff")),
+              child: Text("login as driver")),
           SizedBox(height: 50),
           ElevatedButton(
               style: ElevatedButton.styleFrom(

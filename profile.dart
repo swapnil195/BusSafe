@@ -27,15 +27,13 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  
+  // User Profile Data
   UserProfile user = UserProfile(
     name: 'Swapnil belkar',
     email: 'sb123@gmail.com',
     phone: '+91 7219595828',
     location: 'Mumbai,USA',
   );
-
-  
   void editProfile() async {
     final updatedUser = await Navigator.push(
       context,
@@ -62,7 +60,6 @@ class _ProfilePageState extends State<ProfilePage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            
             Center(
               child: CircleAvatar(
                 radius: 60,
@@ -87,7 +84,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ProfileInfoRow(
                 icon: Icons.location_on, title: 'Location', value: user.location),
             SizedBox(height: 30),
-            
+            // Edit Button
             ElevatedButton(
               onPressed: editProfile,
               child: Text('Edit Profile'),
